@@ -44,8 +44,8 @@ export default function Home() {
         <a href="https://aguspognante.com/">Ver sitio web</a>
       </div></article>
       <article className="case"><div className="case-body">
-        <h3>Del formulario a la hoja de cálculo</h3>
-        <p>Cada consulta se registra automáticamente en una hoja de cálculo y el equipo recibe un aviso. Un flujo sencillo puede estar listo en 1–2 semanas.</p>
+        <h3>Stock y pedidos en un solo lugar</h3>
+        <p>Un panel para saber qué productos quedan, cuáles hay que reponer y qué pedidos siguen pendientes. Al confirmar un pedido, se reservan las unidades y el equipo ve al momento cuánto stock queda disponible.</p>
       </div></article>
       <article className="case"><div className="case-body">
         <h3>Asistente de IA que ejecuta acciones</h3>

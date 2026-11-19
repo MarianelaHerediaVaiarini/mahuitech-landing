@@ -60,13 +60,13 @@ export default function Home() {
     <h2>Somos Mahui Tech</h2>
     <div className="team-members">
       <article className="card">
-        <img src="/team/marianela.webp" alt="Retrato de Marianela" width="600" height="600" loading="lazy" />
-        <h3>Marianela</h3>
+        <img src="/team/marianela.webp" alt="Retrato de Marianela Heredia" width="600" height="600" loading="lazy" />
+        <h3>Marianela Heredia</h3>
         <p>Desarrollo. Construye webs, sistemas de gestión y automatizaciones.</p>
       </article>
       <article className="card">
-        <img src="/team/design.webp" alt="Retrato del responsable de diseño" width="600" height="600" loading="lazy" />
-        <h3>{process.env.TEAM_DESIGNER_NAME?.trim() || 'Diseño visual'}</h3>
+        <img src="/team/design.webp" alt="Retrato de Nehuen Morales" width="600" height="600" loading="lazy" />
+        <h3>Nehuen Morales</h3>
         <p>Da forma a la identidad gráfica y al diseño de cada web.</p>
       </article>
     </div>

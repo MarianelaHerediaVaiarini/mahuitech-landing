@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { contactEmail } from '../site-config';
 
 const titles = {
   'aviso-legal': 'Aviso legal',
@@ -12,7 +13,6 @@ export function generateStaticParams() {
 
 export default async function LegalPage({ params }) {
   const { legal } = await params;
-  const email = process.env.CONTACT_EMAIL;
   const owner = process.env.LEGAL_OWNER;
   const taxId = process.env.LEGAL_TAX_ID;
   const address = process.env.LEGAL_ADDRESS;
@@ -22,8 +22,8 @@ export default async function LegalPage({ params }) {
       <Link href="/">Volver a Mahui Tech</Link>
       <h1>{titles[legal]}</h1>
       {legal !== 'cookies' && (
-        <p>{owner && taxId && address && email
-          ? <>{owner} · NIF {taxId} · {address} · <a href={`mailto:${email}`}>{email}</a></>
+        <p>{owner && taxId && address
+          ? <>{owner} · NIF {taxId} · {address} · <a href={`mailto:${contactEmail}`}>{contactEmail}</a></>
           : 'Borrador pendiente de completar con los datos del titular.'}</p>
       )}
       {legal === 'aviso-legal' && <p>Este sitio presenta los servicios de diseño web, automatización y desarrollo de software de Mahui Tech.</p>}

@@ -1,4 +1,5 @@
 import Contact from './contact';
+import { contactEmail } from './site-config';
 
 export default function Home() {
   const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL;
@@ -11,7 +12,7 @@ export default function Home() {
 <div className="site">
 <section className="hero" id="inicio">
 <div className="wrap">
-<header><a className="logo" href="#inicio">mahui tech<sup aria-hidden="true">✦</sup></a><nav aria-label="Principal"><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#proyectos">Proyectos</a><a href="#equipo">Equipo</a></nav><a className="btn nav-contact" href="#contacto">Hablemos</a></header>
+<header><a className="logo" href="#inicio">mahui tech<sup aria-hidden="true">✦</sup></a><nav aria-label="Principal"><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#proyectos">Proyectos</a><a href="#equipo">Equipo</a><a href="#preguntas">Preguntas frecuentes</a></nav><a className="btn nav-contact" href="#contacto">Hablemos</a></header>
 <div className="hero-copy">
   <h1>Menos tareas repetitivas. Más tiempo para tu negocio.</h1>
   <p>Creamos webs, automatizaciones y sistemas de gestión para negocios y equipos pequeños. Precio cerrado y plazos claros.</p>
@@ -34,7 +35,7 @@ export default function Home() {
 <article className="card"><h3>Integraciones</h3><p>Conecta las herramientas que tu equipo ya usa.</p><ul><li>Conexión entre dos herramientas</li><li>Sincronización de datos</li><li>Pruebas y documentación</li></ul><div className="card-foot"><strong>Desde 650 €</strong><span>2–3 semanas</span><a href="#contacto">Consulta sobre una integración</a></div></article>
 <article className="card"><h3>Mantenimiento mensual</h3><p>Copias de seguridad, actualizaciones y pequeños cambios.</p><div className="card-foot">{maintenancePrice ? <strong>Desde {maintenancePrice} €/mes</strong> : <span>Cuota según el alcance</span>}<a href="#contacto">Consulta sobre mantenimiento</a></div></article>
 </div></div></section>
-<section className="block" id="proceso"><div className="wrap"><h2>Cómo trabajamos</h2><ol className="steps"><li><h3>Llamada inicial</h3><p>En 20 minutos vemos qué quieres mejorar y cómo trabajas hoy.</p></li><li><h3>Propuesta</h3><p>Te enviamos por escrito qué incluye el proyecto, cuánto cuesta y cuánto tarda.</p></li><li><h3>Desarrollo</h3><p>Diseñamos y construimos la solución. Te mostramos avances para que puedas revisarlos.</p></li><li><h3>Entrega</h3><p>Publicamos o activamos la solución y te enseñamos a usarla.</p></li><li><h3>Soporte</h3><p>Antes de empezar acordamos cómo te acompañamos después de la entrega.</p></li></ol></div></section>
+<section className="block" id="proceso"><div className="wrap"><h2>Cómo trabajamos</h2><ol className="steps"><li><h3>Llamada inicial</h3><p>En 20 minutos vemos qué quieres mejorar y cómo trabajas hoy.</p></li><li><h3>Propuesta</h3><p>Te enviamos por escrito qué incluye el proyecto, cuánto cuesta y cuánto tarda. Incluye hasta 2 rondas de cambios.</p></li><li><h3>Desarrollo</h3><p>Diseñamos y construimos la solución. Te mostramos avances para que puedas revisarlos.</p></li><li><h3>Entrega</h3><p>Publicamos o activamos la solución y te enseñamos a usarla.</p></li><li><h3>Soporte</h3><p>30 días de ajustes incluidos. Después, mantenimiento opcional.</p></li></ol></div></section>
 <section className="block" id="proyectos"><div className="wrap"><h2>Proyectos y soluciones</h2>
 <div className="examples">
   <article className="case case-featured">
@@ -54,10 +55,44 @@ export default function Home() {
     <p><strong>Plazo orientativo:</strong> 1–2 semanas para un flujo sencillo.</p>
   </div></article>
 </div></div></section>
-<section className="block" id="equipo"><div className="wrap team"><h2>Somos Mahui Tech</h2><div><p>Somos una pareja y el equipo detrás de Mahui Tech. Combinamos diseño visual y desarrollo para crear webs y automatizaciones para pequeñas empresas.</p><p>Desde la primera llamada hasta la entrega, hablas directamente con quienes diseñamos y desarrollamos tu proyecto.</p></div></div></section>
+<section className="block" id="equipo">
+  <div className="wrap">
+    <h2>Somos Mahui Tech</h2>
+    <div className="team-members">
+      <article className="card">
+        <img src="/team/marianela.webp" alt="Retrato de Marianela" width="600" height="600" loading="lazy" />
+        <h3>Marianela</h3>
+        <p>Desarrollo. Construye webs, sistemas de gestión y automatizaciones.</p>
+      </article>
+      <article className="card">
+        <img src="/team/design.webp" alt="Retrato del responsable de diseño" width="600" height="600" loading="lazy" />
+        <h3>{process.env.TEAM_DESIGNER_NAME?.trim() || 'Diseño visual'}</h3>
+        <p>Da forma a la identidad gráfica y al diseño de cada web.</p>
+      </article>
+    </div>
+    <ul className="team-commitments">
+      <li>Precio cerrado</li>
+      <li>El código y el dominio son tuyos</li>
+      <li>Hablas siempre con quien lo hace</li>
+    </ul>
+  </div>
+</section>
+<section className="block" id="preguntas">
+  <div className="wrap">
+    <h2>Preguntas frecuentes</h2>
+    <div className="faq">
+      <details><summary>¿Cuánto tarda?</summary><p>Una web corporativa suele llevar entre 3 y 4 semanas. Para sistemas de gestión y otros desarrollos a medida, concretamos el plazo en la propuesta.</p></details>
+      <details><summary>¿Qué pasa si quiero cambios?</summary><p>La propuesta incluye hasta 2 rondas de cambios dentro del alcance acordado. Si quieres ampliar el alcance, acordamos el coste y el plazo antes de avanzar.</p></details>
+      <details><summary>¿Quién es el dueño del código?</summary><p>El código del proyecto y el dominio son tuyos. Al entregar el proyecto te damos acceso al código y a la gestión del dominio.</p></details>
+      <details><summary>¿Qué pasa después de la entrega?</summary><p>Tienes 30 días de ajustes incluidos. Después, puedes contratar el mantenimiento de forma opcional.</p></details>
+      <details><summary>¿Cómo se paga?</summary><p>La propuesta indica el importe total y las condiciones de pago para que puedas revisarlos antes de aceptar.</p></details>
+    </div>
+  </div>
+</section>
 <section className="block" id="contacto"><div className="wrap">
   <div className="call"><div><h2>Hablemos de tu negocio</h2><p>Cuéntanos qué necesitas en una llamada gratuita de 20 minutos.</p></div>{bookingUrl && <a className="btn" href={bookingUrl}>Agendar llamada gratuita</a>}</div>
-  <Contact email={process.env.CONTACT_EMAIL} />
+  <p className="contact-response">Respondemos en 24 h laborables. <a href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
+  <Contact email={contactEmail} />
 </div></section>
 </main>
 <footer className="wrap"><a className="logo" href="#inicio">mahui tech<sup aria-hidden="true">✦</sup></a><div className="legal-links"><a href="/aviso-legal/">Aviso legal</a><a href="/privacidad/">Política de privacidad</a><a href="/cookies/">Política de cookies</a></div></footer>

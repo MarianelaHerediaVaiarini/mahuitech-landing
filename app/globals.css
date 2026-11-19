@@ -74,3 +74,16 @@ header{display:flex;justify-content:space-between;align-items:center;gap:24px;pa
 .contact-form .btn{justify-self:start}
 .contact-form p{margin-top:10px}
 @container (max-width:680px){.case-featured{grid-template-columns:1fr}}
+
+.team-members{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:28px}
+.team-members img{display:block;width:100%;height:auto;max-width:300px;aspect-ratio:1;object-fit:cover;filter:grayscale(1);border-radius:12px}
+.team-commitments{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;padding:0;margin:20px 0 0}
+.team-commitments li{border:1px solid #ffffff28;border-radius:12px;padding:14px;color:#ffd2c1}
+.faq{display:grid;gap:10px;margin-top:28px;max-width:780px}
+.faq details{border:1px solid #ffffff28;border-radius:12px;background:#101631;padding:14px 18px}
+.faq summary{cursor:pointer;font-weight:600}
+.faq p{margin-top:8px}
+.contact-response{margin-top:18px}
+.contact-response a{display:block;text-decoration:underline}
+@container (max-width:680px){.team-commitments{grid-template-columns:1fr}}
+@container (max-width:460px){.team-members{grid-template-columns:1fr}}

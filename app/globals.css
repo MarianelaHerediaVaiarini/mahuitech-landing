@@ -57,3 +57,20 @@ header{display:flex;justify-content:space-between;align-items:center;gap:24px;pa
   .primary-services .card:hover,.examples .case:hover{border-color:#ff9a7680}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.examples{grid-template-columns:1fr}
+.case-featured{display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.case-featured img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.case-featured blockquote{margin:16px 0;padding-left:14px;border-left:2px solid #e8693a}
+.legal-links{display:flex;flex-wrap:wrap;gap:12px 20px}
+.legal-page h1{margin:24px 0}
+.legal-page p+p{margin-top:12px}
+.contact-form{margin-top:24px;max-width:600px}
+.contact-form fieldset{border:0;margin:0;padding:0;display:grid;gap:14px}
+.contact-form label{display:grid;gap:4px}
+.contact-form input:not([type=checkbox]),.contact-form textarea{width:100%;font:inherit;color:inherit;background:#101631;border:1px solid #b9cdff66;border-radius:8px;padding:9px}
+.contact-form .privacy-check{display:flex;align-items:flex-start;gap:8px}
+.contact-form a,.legal-page a{text-decoration:underline}
+.contact-form .btn{justify-self:start}
+.contact-form p{margin-top:10px}
+@container (max-width:680px){.case-featured{grid-template-columns:1fr}}

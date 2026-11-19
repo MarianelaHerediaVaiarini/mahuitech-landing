@@ -38,3 +38,11 @@ Publicá el contenido de `out/` en un hosting estático. En una plataforma de de
 ## Cambios
 
 Antes de subir cambios, ejecutá `npm run build`. Usá Conventional Commits en inglés, por ejemplo `feat: add a project case study` o `fix: improve mobile navigation`.
+
+## Datos para publicar
+
+- Completa los precios en euros mediante `ERP_STARTING_PRICE`, `AI_STARTING_PRICE` y `MAINTENANCE_MONTHLY_PRICE`.
+- Configura `CONTACT_EMAIL`. El formulario prepara un correo con una casilla de aceptación obligatoria y deja el envío en manos del visitante.
+- Para el caso La Tribu, puedes guardar la captura en `public/` e indicar su ruta en `LA_TRIBU_SCREENSHOT`. Configura `LA_TRIBU_QUOTE` con la frase aprobada por Agus.
+- Completa el titular, NIF y domicilio con `LEGAL_OWNER`, `LEGAL_TAX_ID` y `LEGAL_ADDRESS`. Revisa los borradores de aviso legal y privacidad con la gestoría antes del despliegue.
+- El proyecto carece de analítica y scripts publicitarios. Confirma con la gestoría qué cookies introduce el alojamiento y revisa el consentimiento si añades servicios que usen cookies no esenciales.

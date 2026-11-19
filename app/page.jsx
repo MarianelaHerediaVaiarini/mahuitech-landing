@@ -6,8 +6,6 @@ export default function Home() {
   const erpPrice = process.env.ERP_STARTING_PRICE;
   const aiPrice = process.env.AI_STARTING_PRICE;
   const maintenancePrice = process.env.MAINTENANCE_MONTHLY_PRICE;
-  const screenshot = process.env.LA_TRIBU_SCREENSHOT;
-  const quote = process.env.LA_TRIBU_QUOTE;
   return (
 <div className="site">
 <section className="hero" id="inicio">
@@ -36,43 +34,44 @@ export default function Home() {
 <article className="card"><h3>Mantenimiento mensual</h3><p>Copias de seguridad, actualizaciones y pequeños cambios.</p><div className="card-foot">{maintenancePrice ? <strong>Desde {maintenancePrice} €/mes</strong> : <span>Cuota según el alcance</span>}<a href="#contacto">Consulta sobre mantenimiento</a></div></article>
 </div></div></section>
 <section className="block" id="proceso"><div className="wrap"><h2>Cómo trabajamos</h2><ol className="steps"><li><h3>Llamada inicial</h3><p>En 20 minutos vemos qué quieres mejorar y cómo trabajas hoy.</p></li><li><h3>Propuesta</h3><p>Te enviamos por escrito qué incluye el proyecto, cuánto cuesta y cuánto tarda. Incluye hasta 2 rondas de cambios.</p></li><li><h3>Desarrollo</h3><p>Diseñamos y construimos la solución. Te mostramos avances para que puedas revisarlos.</p></li><li><h3>Entrega</h3><p>Publicamos o activamos la solución y te enseñamos a usarla.</p></li><li><h3>Soporte</h3><p>30 días de ajustes incluidos. Después, mantenimiento opcional.</p></li></ol></div></section>
-<section className="block" id="proyectos"><div className="wrap"><h2>Proyectos y soluciones</h2>
-<div className="examples">
-  <article className="case case-featured">
-    <img src={screenshot || "https://i.ibb.co/YT8M85hF/Bienvenida-a-este-universo.png"} alt="Portada de Agus Pognante / La Tribu" loading="lazy" decoding="async" />
-    <div className="case-body">
-      <small>Proyecto real · Web</small>
-      <h3>Agus Pognante / La Tribu</h3>
-      <p>Diseñamos y desarrollamos una web que reúne su agenda, su podcast y sus experiencias. Para cada nuevo encuentro, creamos su landing y las piezas gráficas para comunicarlo.</p>
-      {quote && <blockquote><p>«{quote}»</p><cite>Agus Pognante</cite></blockquote>}
-      <a href="https://aguspognante.com/">Ver sitio web</a>
+<section className="block" id="proyectos">
+  <div className="wrap">
+    <h2>Proyectos y soluciones</h2>
+    <div className="examples">
+      <article className="case"><div className="case-body">
+        <h3>Agus Pognante / La Tribu</h3>
+        <p>Diseñamos y desarrollamos una web que reúne su agenda, su podcast y sus experiencias. Para cada encuentro creamos su landing y sus piezas gráficas.</p>
+        <a href="https://aguspognante.com/">Ver sitio web</a>
+      </div></article>
+      <article className="case"><div className="case-body">
+        <h3>Del formulario a la hoja de cálculo</h3>
+        <p>Cada consulta se registra automáticamente en una hoja de cálculo y el equipo recibe un aviso. Un flujo sencillo puede estar listo en 1–2 semanas.</p>
+      </div></article>
+      <article className="case"><div className="case-body">
+        <h3>Asistente de IA que ejecuta acciones</h3>
+        <p>Un chat desde el que puedes obtener documentos, comparar información y actualizar estados. Así el equipo resuelve tareas habituales desde una sola conversación.</p>
+      </div></article>
     </div>
-  </article>
-  <article className="case"><div className="case-body">
-    <small>Ejemplo · Automatización</small>
-    <h3>Del formulario a la hoja de cálculo sin copiar nada</h3>
-    <p>Cuando llega una consulta, alguien tiene que copiar sus datos a una hoja y avisar al equipo. Conectamos el formulario con la hoja de cálculo para registrar cada entrada y enviar un aviso automático.</p>
-    <p><strong>Plazo orientativo:</strong> 1–2 semanas para un flujo sencillo.</p>
-  </div></article>
-</div></div></section>
+  </div>
+</section>
 <section className="block" id="equipo" aria-labelledby="equipo-titulo">
   <div className="wrap">
     <div className="team-layout">
       <div className="team-intro">
         <h2 id="equipo-titulo">Somos <span>Mahui Tech</span></h2>
-        <p>Diseñamos y desarrollamos sistemas, webs y automatizaciones. Desde la primera conversación hasta la entrega, hablas directamente con quienes construimos tu proyecto.</p>
+        <p>Somos dos desarrolladores y trabajamos juntos en cada proyecto. Desde la primera conversación hasta la entrega, hablas directamente con quienes lo construimos.</p>
         <a className="btn" href="#contacto">Hablemos 20 minutos</a>
       </div>
       <div className="team-members">
         <article>
           <img src="/team/marianela.webp" alt="Retrato de Marianela Heredia" width="600" height="600" loading="lazy" />
           <h3>Marianela Heredia</h3>
-          <p>Desarrollo web, sistemas de gestión y automatizaciones.</p>
+          <p>Desarrollo web con foco en frontend y diseño: interfaz, experiencia de usuario y la parte visual de cada proyecto.</p>
         </article>
         <article>
           <img src="/team/design.webp" alt="Retrato de Nehuen Morales" width="600" height="600" loading="lazy" />
           <h3>Nehuen Morales</h3>
-          <p>Identidad gráfica y diseño visual de cada web.</p>
+          <p>Desarrollo web, sistemas de gestión y automatizaciones.</p>
         </article>
       </div>
     </div>

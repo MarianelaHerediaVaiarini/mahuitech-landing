@@ -58,10 +58,6 @@ header{display:flex;justify-content:space-between;align-items:center;gap:24px;pa
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
-.examples{grid-template-columns:1fr}
-.case-featured{display:grid;grid-template-columns:1fr 1fr;align-items:center}
-.case-featured img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-.case-featured blockquote{margin:16px 0;padding-left:14px;border-left:2px solid #e8693a}
 .legal-links{display:flex;flex-wrap:wrap;gap:12px 20px}
 .legal-page h1{margin:24px 0}
 .legal-page p+p{margin-top:12px}
@@ -73,7 +69,6 @@ header{display:flex;justify-content:space-between;align-items:center;gap:24px;pa
 .contact-form a,.legal-page a{text-decoration:underline}
 .contact-form .btn{justify-self:start}
 .contact-form p{margin-top:10px}
-@container (max-width:680px){.case-featured{grid-template-columns:1fr}}
 
 .team-layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(26px,5cqi,68px);align-items:center}
 .team-intro{grid-column:2;grid-row:1;border-left:1px solid #ffffff28;padding-left:clamp(22px,4cqi,48px)}

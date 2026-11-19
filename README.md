@@ -41,7 +41,6 @@ Antes de subir cambios, ejecutá `npm run build`. Usá Conventional Commits en i
 
 ## Datos para publicar
 
-- Completa los precios en euros mediante `ERP_STARTING_PRICE`, `AI_STARTING_PRICE` y `MAINTENANCE_MONTHLY_PRICE`.
 - El correo de contacto es `mahuitech@gmail.com`. Usa `CONTACT_EMAIL` para actualizarlo. El formulario prepara un correo con una casilla de aceptación obligatoria y deja el envío en manos del visitante.
 - Completa el titular, NIF y domicilio con `LEGAL_OWNER`, `LEGAL_TAX_ID` y `LEGAL_ADDRESS`. Revisa los borradores de aviso legal y privacidad con la gestoría antes del despliegue.
 - El proyecto carece de analítica y scripts publicitarios. Confirma con la gestoría qué cookies introduce el alojamiento y revisa el consentimiento si añades servicios que usen cookies no esenciales.

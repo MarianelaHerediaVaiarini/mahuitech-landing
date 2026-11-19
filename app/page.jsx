@@ -55,20 +55,26 @@ export default function Home() {
     <p><strong>Plazo orientativo:</strong> 1–2 semanas para un flujo sencillo.</p>
   </div></article>
 </div></div></section>
-<section className="block" id="equipo">
+<section className="block" id="equipo" aria-labelledby="equipo-titulo">
   <div className="wrap">
-    <h2>Somos Mahui Tech</h2>
-    <div className="team-members">
-      <article className="card">
-        <img src="/team/marianela.webp" alt="Retrato de Marianela Heredia" width="600" height="600" loading="lazy" />
-        <h3>Marianela Heredia</h3>
-        <p>Desarrollo. Construye webs, sistemas de gestión y automatizaciones.</p>
-      </article>
-      <article className="card">
-        <img src="/team/design.webp" alt="Retrato de Nehuen Morales" width="600" height="600" loading="lazy" />
-        <h3>Nehuen Morales</h3>
-        <p>Da forma a la identidad gráfica y al diseño de cada web.</p>
-      </article>
+    <div className="team-layout">
+      <div className="team-intro">
+        <h2 id="equipo-titulo">Somos <span>Mahui Tech</span></h2>
+        <p>Diseñamos y desarrollamos sistemas, webs y automatizaciones. Desde la primera conversación hasta la entrega, hablas directamente con quienes construimos tu proyecto.</p>
+        <a className="btn" href="#contacto">Hablemos 20 minutos</a>
+      </div>
+      <div className="team-members">
+        <article>
+          <img src="/team/marianela.webp" alt="Retrato de Marianela Heredia" width="600" height="600" loading="lazy" />
+          <h3>Marianela Heredia</h3>
+          <p>Desarrollo web, sistemas de gestión y automatizaciones.</p>
+        </article>
+        <article>
+          <img src="/team/design.webp" alt="Retrato de Nehuen Morales" width="600" height="600" loading="lazy" />
+          <h3>Nehuen Morales</h3>
+          <p>Identidad gráfica y diseño visual de cada web.</p>
+        </article>
+      </div>
     </div>
     <ul className="team-commitments">
       <li>Precio cerrado</li>

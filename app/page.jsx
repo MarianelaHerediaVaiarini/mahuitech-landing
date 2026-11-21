@@ -11,9 +11,25 @@ export default function Home() {
 <div className="hero-copy">
   <h1>Menos tareas repetitivas. Más tiempo para tu negocio.</h1>
   <p>Creamos webs, automatizaciones y sistemas de gestión para negocios y equipos pequeños. Precio cerrado y plazos claros.</p>
-  <div className="actions"><a className="btn alt" href="#servicios">Ver servicios</a><a className="btn alt" href="#contacto">Hablemos 20 minutos</a></div>
+  <div className="actions">
+    <a className="btn" href="#contacto">Hablemos 20 minutos</a>
+    <a className="btn alt" href="#servicios">Ver servicios</a>
+  </div>
 </div>
-<div className="hero-end" aria-hidden="true"><span className="star">✦</span></div>
+<div className="hero-end">
+  <p className="hero-services">Webs · Automatizaciones · Integraciones</p>
+  <svg className="hero-seal" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+    <defs>
+      <path id="hero-seal-top" d="M 8,32 A 24,24 0 0,1 56,32" />
+      <path id="hero-seal-bottom" d="M 56,32 A 24,24 0 0,1 8,32" />
+    </defs>
+    <text textAnchor="middle"><textPath href="#hero-seal-top" startOffset="50%">mahui tech</textPath></text>
+    <text textAnchor="middle"><textPath href="#hero-seal-bottom" startOffset="50%">mahui tech</textPath></text>
+    <circle cx="6" cy="32" r="0.8" />
+    <circle cx="58" cy="32" r="0.8" />
+    <path d="M 32,24 Q 33,31 40,32 Q 33,33 32,40 Q 31,33 24,32 Q 31,31 32,24 Z" />
+  </svg>
+</div>
 </div>
 </section>
 <main>

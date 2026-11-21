@@ -12,7 +12,7 @@ export default function Home() {
   <h1>Menos tareas repetitivas. Más tiempo para tu negocio.</h1>
   <p>Creamos webs, automatizaciones y sistemas de gestión para negocios y equipos pequeños. Precio cerrado y plazos claros.</p>
   <div className="actions">
-    <a className="btn" href="#contacto">Hablemos 20 minutos</a>
+    <a className="btn" href="#contacto">Enviar consulta</a>
     <a className="btn alt" href="#servicios">Ver servicios</a>
   </div>
 </div>
@@ -40,8 +40,8 @@ export default function Home() {
 <article className="card" id="web-corporativa"><h3>Web corporativa</h3><figure className="service-preview preview-web"><div className="demo-web" aria-hidden="true"><div className="demo-browser"><div className="demo-web-nav"><b>estudio norte</b><span>Proyectos · Contacto</span></div><div className="demo-web-hero"><div><small>Interiorismo</small><strong>Espacios para<br />vivir mejor.</strong><b className="demo-web-cta">Ver proyectos</b></div><div className="demo-arch"></div></div><div className="demo-web-bottom">Reformas integrales <span>Asesoría de interiores</span></div></div><div className="demo-handset"><b>estudio norte</b><div className="demo-arch"></div><strong>Espacios para vivir mejor.</strong><b className="demo-web-cta">Ver proyectos</b></div></div><figcaption>Ejemplo de web corporativa en escritorio y móvil</figcaption></figure><p>Una web con diseño visual adaptado a tu marca, pensada para presentar tus servicios y recibir consultas.</p><ul><li>Diseño y desarrollo de una página en el precio base</li><li>Hasta cinco páginas, según presupuesto</li><li>Formulario de contacto</li><li>Versión móvil y SEO básico</li></ul><div className="card-foot"><strong>Desde 950 €</strong><span>3–4 semanas</span><a href="#contacto">Pide presupuesto para tu web</a></div></article>
 </div>
 <p className="intro">Los precios y plazos son orientativos. IVA no incluido.</p>
-<div className="grid">
-<article className="card feature"><h3>Automatización</h3><p>Automatiza una tarea repetitiva. Por ejemplo, cuando un cliente acepta un presupuesto, se crea una tarea y se avisa al equipo.</p><ul><li>Un flujo sencillo con un disparador y unas pocas acciones</li><li>Avisos y registro de datos</li><li>Pruebas y guía de uso</li></ul><div className="card-foot"><strong>Desde 450 €</strong><span>1–2 semanas</span><a href="#contacto">Consulta sobre una automatización</a></div></article>
+<div className="grid service-cards">
+<article className="card"><h3>Automatización</h3><p>Automatiza una tarea repetitiva. Por ejemplo, cuando un cliente acepta un presupuesto, se crea una tarea y se avisa al equipo.</p><ul><li>Un flujo sencillo con un disparador y unas pocas acciones</li><li>Avisos y registro de datos</li><li>Pruebas y guía de uso</li></ul><div className="card-foot"><strong>Desde 450 €</strong><span>1–2 semanas</span><a href="#contacto">Consulta sobre una automatización</a></div></article>
 <article className="card"><h3>Implementación de IA</h3><p>Incorporamos IA a tareas concretas de tu negocio.</p><ul><li>Chatbots con información de tu negocio</li><li>Automatización de lectura y clasificación de mensajes o documentos</li><li>Derivación de consultas a tu equipo</li></ul><div className="card-foot"><strong>Proyecto piloto desde 900 €</strong><span>Un caso de uso y una fuente de datos. Consumo de IA aparte.</span><a href="#contacto">Consulta sobre una solución con IA</a></div></article>
 <article className="card"><h3>Integraciones</h3><p>Conecta las herramientas que tu equipo ya usa. Por ejemplo, registra los pedidos de tu tienda en tu sistema de gestión.</p><ul><li>Conexión entre dos herramientas con API</li><li>Sincronización de datos en una dirección</li><li>Pruebas y documentación</li></ul><div className="card-foot"><strong>Desde 650 €</strong><span>2–3 semanas. Migraciones y sincronización bidireccional se cotizan aparte.</span><a href="#contacto">Consulta sobre una integración</a></div></article>
 <article className="card"><h3>Mantenimiento web</h3><p>Copias de seguridad, actualizaciones y hasta 30 minutos de cambios al mes para una web corporativa.</p><div className="card-foot"><strong>Desde 59 €/mes</strong><span>Sistemas de gestión e integraciones se cotizan según alcance.</span><a href="#contacto">Consulta sobre mantenimiento</a></div></article>
@@ -108,7 +108,7 @@ export default function Home() {
   </div>
 </section>
 <section className="block" id="contacto"><div className="wrap">
-  <div className="call"><div><h2>Hablemos de tu negocio</h2><p>Cuéntanos qué necesitas en una llamada gratuita de 20 minutos.</p></div>{bookingUrl && <a className="btn" href={bookingUrl}>Agendar llamada gratuita</a>}</div>
+  <div className="call"><div><h2>Hablemos de tu negocio</h2><p>Cuéntanos qué necesitas y te responderemos por correo.</p></div>{bookingUrl && <a className="btn" href={bookingUrl}>Agendar llamada gratuita</a>}</div>
   <p className="contact-response">Respondemos en 24 h laborables. <a href={`mailto:${contactEmail}`}>{contactEmail}</a></p>
   <Contact email={contactEmail} />
 </div></section>

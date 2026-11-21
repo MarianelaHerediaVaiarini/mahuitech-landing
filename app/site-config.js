@@ -1,1 +1,1 @@
-export const contactEmail = process.env.CONTACT_EMAIL?.trim() || 'mahuitech@gmail.com';
+export const contactEmail = process.env.CONTACT_EMAIL?.trim() || 'info@mahuitech.es';

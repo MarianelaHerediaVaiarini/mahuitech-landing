@@ -41,6 +41,7 @@ Antes de subir cambios, ejecutá `npm run build`. Usá Conventional Commits en i
 
 ## Datos para publicar
 
-- El correo de contacto es `mahuitech@gmail.com`. Usa `CONTACT_EMAIL` para actualizarlo. El formulario prepara un correo con una casilla de aceptación obligatoria y deja el envío en manos del visitante.
-- Completa el titular, NIF y domicilio con `LEGAL_OWNER`, `LEGAL_TAX_ID` y `LEGAL_ADDRESS`. Revisa los borradores de aviso legal y privacidad con la gestoría antes del despliegue.
+- El correo de contacto es `info@mahuitech.es`. Activa el buzón antes de publicar. Usa `CONTACT_EMAIL` si quieres mostrar otra dirección en la web.
+- En Netlify, activa **Forms → Enable form detection** y vuelve a desplegar. Comprueba que aparece el formulario `contacto`, añade `info@mahuitech.es` en **Forms → Submission notifications** y confirma el destinatario si Netlify lo solicita. Envía una consulta de prueba y comprueba que aparece en el panel y llega al buzón.
+- Completa el titular, NIF y domicilio con `LEGAL_OWNER`, `LEGAL_TAX_ID` y `LEGAL_ADDRESS` en las variables de compilación de Netlify. Los valores se incluyen en el HTML del aviso legal y la política de privacidad al volver a desplegar. Revisa ambos textos con la gestoría antes de hacer pública la web.
 - El proyecto carece de analítica y scripts publicitarios. Confirma con la gestoría qué cookies introduce el alojamiento y revisa el consentimiento si añades servicios que usen cookies no esenciales.

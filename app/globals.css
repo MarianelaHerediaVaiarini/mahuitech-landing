@@ -95,8 +95,61 @@ header{display:flex;justify-content:space-between;align-items:center;gap:24px;pa
 .contact-form .privacy-check{display:flex;align-items:flex-start;gap:8px}
 .contact-form a,.legal-page a{text-decoration:underline}
 .contact-form .btn{justify-self:start}
-.contact-form .btn:disabled{cursor:wait;opacity:.75}
-.contact-form p{margin-top:10px}
+.contact-form .btn:disabled{cursor:not-allowed;background:#242b40;border-color:#424a60;color:#a7afc3}
+.contact-form fieldset:disabled .btn{cursor:wait}
+.contact-hint{font-size:.875rem}
+
+.contact-toast {
+  position: fixed;
+  z-index: 20;
+  inset: max(16px, env(safe-area-inset-top)) 16px auto;
+  width: min(calc(100% - 32px), 440px);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px;
+  padding: 14px 12px 14px 16px;
+  border: 1px solid #ffffff28;
+  border-left: 3px solid var(--toast-accent);
+  border-radius: 14px;
+  background: #11182f;
+  box-shadow: 0 12px 36px #050818aa;
+}
+
+.contact-toast--success { --toast-accent: #ffad8d; }
+.contact-toast--error { --toast-accent: #ffa2a0; }
+
+.contact-toast-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: var(--toast-accent);
+  font-weight: 700;
+}
+
+.contact-toast-message p {
+  margin-top: 2px;
+  font-size: .875rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.contact-toast-close {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #c3cae3;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.contact-toast-close:hover { background: #ffffff15; }
 
 .service-cards .card:nth-child(1) {
   background: radial-gradient(ellipse at 0% 4%, #cf633982 0%, #a84c363d 34%, transparent 66%), #101631;

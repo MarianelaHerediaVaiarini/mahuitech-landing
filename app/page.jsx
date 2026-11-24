@@ -1,6 +1,12 @@
 import Contact from './contact';
 import { contactEmail } from './site-config';
 
+export const metadata = {
+  title: { absolute: 'Software a medida, diseño web y automatización | Mahui Tech' },
+  description: 'Desarrollamos sistemas de gestión para pedidos e inventario, webs corporativas y automatizaciones para pequeños negocios. Precio cerrado y plazos claros.',
+  alternates: { canonical: '/' },
+};
+
 export default function Home() {
   const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL;
   return (
@@ -9,8 +15,8 @@ export default function Home() {
 <div className="wrap">
 <header><a className="logo" href="#inicio">mahui tech<sup aria-hidden="true">✦</sup></a><nav aria-label="Principal"><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#proyectos">Proyectos</a><a href="#equipo">Equipo</a><a href="#preguntas">Preguntas frecuentes</a></nav><a className="btn nav-contact" href="#contacto">Hablemos</a></header>
 <div className="hero-copy">
-  <h1>Menos tareas repetitivas. Más tiempo para tu negocio.</h1>
-  <p>Creamos webs, automatizaciones y sistemas de gestión para negocios y equipos pequeños. Precio cerrado y plazos claros.</p>
+  <h1>Software a medida, diseño web y automatización</h1>
+  <p>Creamos webs para recibir consultas, desarrollamos sistemas de pedidos e inventario y automatizamos tareas repetitivas. Trabajamos con pequeños negocios, con precio cerrado y plazos claros.</p>
   <div className="actions">
     <a className="btn" href="#contacto">Enviar consulta</a>
     <a className="btn alt" href="#servicios">Ver servicios</a>
@@ -34,7 +40,7 @@ export default function Home() {
 </section>
 <main>
 <section className="block" id="servicios"><div className="wrap">
-<h2>Lo que podemos hacer por tu negocio</h2>
+<h2>Servicios para pequeños negocios</h2>
 <div className="primary-services">
 <article className="card erp-card" id="sistemas-gestion"><h3>Sistema de gestión a medida</h3><figure className="service-preview preview-erp"><div className="demo-erp" aria-hidden="true"><div className="demo-sidebar"><strong>Almacén</strong><span>Resumen</span><b>Pedidos</b><span>Inventario</span></div><div className="demo-main"><small>Operaciones / Pedidos</small><strong>Gestión de pedidos</strong><div className="demo-metrics"><div>Por preparar<b>08</b></div><div>En tránsito<b>12</b></div><div>Entregados<b>34</b></div></div><table><thead><tr><th>Pedido</th><th>Cliente</th><th>Estado</th></tr></thead><tbody><tr><td>#1042</td><td>Mercado Norte</td><td><span>En tránsito</span></td></tr><tr><td>#1043</td><td>Casa Oliva</td><td><span>Pendiente</span></td></tr></tbody></table></div></div><figcaption>Ejemplo de ERP para pedidos e inventario</figcaption></figure><p>Empezamos por un módulo (pedidos, inventario o compras).</p><p>En la primera llamada revisamos cómo trabaja tu equipo y qué procesos conviene abordar primero.</p><div className="card-foot"><strong>Presupuesto por módulo</strong><a href="#contacto">Hablemos de tu sistema de gestión</a></div></article>
 <article className="card" id="web-corporativa"><h3>Web corporativa</h3><figure className="service-preview preview-web"><div className="demo-web" aria-hidden="true"><div className="demo-browser"><div className="demo-web-nav"><b>estudio norte</b><span>Proyectos · Contacto</span></div><div className="demo-web-hero"><div><small>Interiorismo</small><strong>Espacios para<br />vivir mejor.</strong><b className="demo-web-cta">Ver proyectos</b></div><div className="demo-arch"></div></div><div className="demo-web-bottom">Reformas integrales <span>Asesoría de interiores</span></div></div><div className="demo-handset"><b>estudio norte</b><div className="demo-arch"></div><strong>Espacios para vivir mejor.</strong><b className="demo-web-cta">Ver proyectos</b></div></div><figcaption>Ejemplo de web corporativa en escritorio y móvil</figcaption></figure><p>Una web con diseño visual adaptado a tu marca, pensada para presentar tus servicios y recibir consultas.</p><ul><li>Diseño y desarrollo de una página en el precio base</li><li>Hasta cinco páginas, según presupuesto</li><li>Formulario de contacto</li><li>Versión móvil y SEO básico</li></ul><div className="card-foot"><strong>Desde 950 €</strong><span>3–4 semanas</span><a href="#contacto">Pide presupuesto para tu web</a></div></article>
@@ -54,7 +60,7 @@ export default function Home() {
       <article className="case"><div className="case-body">
         <h3>Agus Pognante / La Tribu</h3>
         <p>Diseñamos y desarrollamos una web que reúne su agenda, su podcast y sus experiencias. Para cada encuentro creamos su landing y sus piezas gráficas.</p>
-        <a href="https://aguspognante.com/">Ver sitio web</a>
+        <a href="https://aguspognante.com/">Ver la web de Agus Pognante</a>
       </div></article>
       <article className="case"><div className="case-body">
         <h3>Stock y pedidos en un solo lugar</h3>
@@ -99,7 +105,8 @@ export default function Home() {
   <div className="wrap">
     <h2>Preguntas frecuentes</h2>
     <div className="faq">
-      <details><summary>¿Cuánto tarda?</summary><p>Una web corporativa suele llevar entre 3 y 4 semanas. Para sistemas de gestión y otros desarrollos a medida, concretamos el plazo en la propuesta.</p></details>
+      <details><summary>¿Cuánto cuesta una web corporativa?</summary><p>El precio parte de 950 € sin IVA e incluye el diseño y desarrollo de una página. Si necesitas más páginas, detallamos el alcance y el precio en la propuesta.</p></details>
+      <details><summary>¿Cuánto se tarda en hacer una web corporativa?</summary><p>Una web corporativa suele llevar entre 3 y 4 semanas. Para sistemas de gestión y otros desarrollos a medida, concretamos el plazo en la propuesta.</p></details>
       <details><summary>¿Qué pasa si quiero cambios?</summary><p>La propuesta incluye hasta 2 rondas de cambios dentro del alcance acordado. Si quieres ampliar el alcance, acordamos el coste y el plazo antes de avanzar.</p></details>
       <details><summary>¿Quién es el dueño del código?</summary><p>El código del proyecto y el dominio son tuyos. Al entregar el proyecto te damos acceso al código y a la gestión del dominio.</p></details>
       <details><summary>¿Qué pasa después de la entrega?</summary><p>Tienes 30 días de ajustes incluidos. Después, puedes contratar el mantenimiento de forma opcional.</p></details>

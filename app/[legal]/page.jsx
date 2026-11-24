@@ -11,6 +11,15 @@ export function generateStaticParams() {
   return Object.keys(titles).map((legal) => ({ legal }));
 }
 
+export async function generateMetadata({ params }) {
+  const { legal } = await params;
+
+  return {
+    title: titles[legal],
+    alternates: { canonical: `/${legal}/` },
+  };
+}
+
 export default async function LegalPage({ params }) {
   const { legal } = await params;
   const owner = process.env.LEGAL_OWNER?.trim();

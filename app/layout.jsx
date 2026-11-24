@@ -1,8 +1,11 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Mahui Tech | Sistemas de gestión y diseño web',
-  description: 'Desarrollamos sistemas ERP a medida, webs corporativas, automatizaciones e integraciones para tu negocio.',
+  metadataBase: new URL('https://mahuitech.es'),
+  title: {
+    default: 'Mahui Tech',
+    template: '%s | Mahui Tech',
+  },
 };
 
 export default function RootLayout({ children }) {

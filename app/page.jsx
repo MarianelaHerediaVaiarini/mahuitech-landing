@@ -1,19 +1,24 @@
 import Contact from './contact';
-import { contactEmail } from './site-config';
+import GuideList from './guias/guide-list';
+import SiteHeader from './site-header';
+import SiteLogo from './site-logo';
+import { businessStructuredData, pageMetadata } from './seo';
+import { businessLocation, contactEmail } from './site-config';
 
-export const metadata = {
-  title: { absolute: 'Software a medida, diseño web y automatización | Mahui Tech' },
-  description: 'Desarrollamos sistemas de gestión para pedidos e inventario, webs corporativas y automatizaciones para pequeños negocios. Precio cerrado y plazos claros.',
-  alternates: { canonical: '/' },
-};
+export const metadata = pageMetadata({
+  title: 'Software a medida, diseño web y automatización',
+  description: 'Diseño web, ERP a medida y automatización para pymes y autónomos. Trabajamos online desde Lloret de Mar (Girona) con negocios de toda España.',
+  path: '/',
+});
 
 export default function Home() {
   const bookingUrl = process.env.NEXT_PUBLIC_BOOKING_URL;
   return (
 <div className="site">
+<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(businessStructuredData).replace(/</g, '\\u003c') }} />
 <section className="hero" id="inicio">
 <div className="wrap">
-<header><a className="logo" href="#inicio">mahui tech<sup aria-hidden="true">✦</sup></a><nav aria-label="Principal"><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#proyectos">Proyectos</a><a href="#equipo">Equipo</a><a href="#preguntas">Preguntas frecuentes</a></nav><a className="btn nav-contact" href="#contacto">Hablemos</a></header>
+<SiteHeader home />
 <div className="hero-copy">
   <h1>Software a medida, diseño web y automatización</h1>
   <p>Creamos webs para recibir consultas, desarrollamos sistemas de pedidos e inventario y automatizamos tareas repetitivas. Trabajamos con pequeños negocios, con precio cerrado y plazos claros.</p>
@@ -42,12 +47,12 @@ export default function Home() {
 <section className="block" id="servicios"><div className="wrap">
 <h2>Servicios para pequeños negocios</h2>
 <div className="primary-services">
-<article className="card erp-card" id="sistemas-gestion"><h3>Sistema de gestión a medida</h3><figure className="service-preview preview-erp"><div className="demo-erp" aria-hidden="true"><div className="demo-sidebar"><strong>Almacén</strong><span>Resumen</span><b>Pedidos</b><span>Inventario</span></div><div className="demo-main"><small>Operaciones / Pedidos</small><strong>Gestión de pedidos</strong><div className="demo-metrics"><div>Por preparar<b>08</b></div><div>En tránsito<b>12</b></div><div>Entregados<b>34</b></div></div><table><thead><tr><th>Pedido</th><th>Cliente</th><th>Estado</th></tr></thead><tbody><tr><td>#1042</td><td>Mercado Norte</td><td><span>En tránsito</span></td></tr><tr><td>#1043</td><td>Casa Oliva</td><td><span>Pendiente</span></td></tr></tbody></table></div></div><figcaption>Ejemplo de ERP para pedidos e inventario</figcaption></figure><p>Empezamos por un módulo (pedidos, inventario o compras).</p><p>En la primera llamada revisamos cómo trabaja tu equipo y qué procesos conviene abordar primero.</p><div className="card-foot"><strong>Presupuesto por módulo</strong><a href="#contacto">Hablemos de tu sistema de gestión</a></div></article>
-<article className="card" id="web-corporativa"><h3>Web corporativa</h3><figure className="service-preview preview-web"><div className="demo-web" aria-hidden="true"><div className="demo-browser"><div className="demo-web-nav"><b>estudio norte</b><span>Proyectos · Contacto</span></div><div className="demo-web-hero"><div><small>Interiorismo</small><strong>Espacios para<br />vivir mejor.</strong><b className="demo-web-cta">Ver proyectos</b></div><div className="demo-arch"></div></div><div className="demo-web-bottom">Reformas integrales <span>Asesoría de interiores</span></div></div><div className="demo-handset"><b>estudio norte</b><div className="demo-arch"></div><strong>Espacios para vivir mejor.</strong><b className="demo-web-cta">Ver proyectos</b></div></div><figcaption>Ejemplo de web corporativa en escritorio y móvil</figcaption></figure><p>Una web con diseño visual adaptado a tu marca, pensada para presentar tus servicios y recibir consultas.</p><ul><li>Diseño y desarrollo de una página en el precio base</li><li>Hasta cinco páginas, según presupuesto</li><li>Formulario de contacto</li><li>Versión móvil y SEO básico</li></ul><div className="card-foot"><strong>Desde 950 €</strong><span>3–4 semanas</span><a href="#contacto">Pide presupuesto para tu web</a></div></article>
+<article className="card erp-card" id="sistemas-gestion"><h3>Sistema de gestión (ERP) a medida</h3><figure className="service-preview preview-erp"><div className="demo-erp" aria-hidden="true"><div className="demo-sidebar"><strong>Almacén</strong><span>Resumen</span><b>Pedidos</b><span>Inventario</span></div><div className="demo-main"><small>Operaciones / Pedidos</small><strong>Gestión de pedidos</strong><div className="demo-metrics"><div>Por preparar<b>08</b></div><div>En tránsito<b>12</b></div><div>Entregados<b>34</b></div></div><table><thead><tr><th>Pedido</th><th>Cliente</th><th>Estado</th></tr></thead><tbody><tr><td>#1042</td><td>Mercado Norte</td><td><span>En tránsito</span></td></tr><tr><td>#1043</td><td>Casa Oliva</td><td><span>Pendiente</span></td></tr></tbody></table></div></div><figcaption>Ejemplo de ERP para pedidos e inventario</figcaption></figure><p>Empezamos por un módulo (pedidos, inventario o compras).</p><p>En la primera llamada revisamos cómo trabaja tu equipo y qué procesos conviene abordar primero.</p><div className="card-foot"><strong>Presupuesto por módulo</strong><a href="#contacto">Hablemos de tu sistema de gestión</a></div></article>
+<article className="card" id="web-corporativa"><h3>Diseño web para pequeños negocios y autónomos</h3><figure className="service-preview preview-web"><div className="demo-web" aria-hidden="true"><div className="demo-browser"><div className="demo-web-nav"><b>estudio norte</b><span>Proyectos · Contacto</span></div><div className="demo-web-hero"><div><small>Interiorismo</small><strong>Espacios para<br />vivir mejor.</strong><b className="demo-web-cta">Ver proyectos</b></div><div className="demo-arch"></div></div><div className="demo-web-bottom">Reformas integrales <span>Asesoría de interiores</span></div></div><div className="demo-handset"><b>estudio norte</b><div className="demo-arch"></div><strong>Espacios para vivir mejor.</strong><b className="demo-web-cta">Ver proyectos</b></div></div><figcaption>Ejemplo de web corporativa en escritorio y móvil</figcaption></figure><p>Una web con diseño visual adaptado a tu marca, pensada para presentar tus servicios y recibir consultas.</p><ul><li>Diseño y desarrollo de una página en el precio base</li><li>Hasta cinco páginas, según presupuesto</li><li>Formulario de contacto</li><li>Versión móvil y SEO básico</li></ul><div className="card-foot"><strong>Desde 950 €</strong><span>3–4 semanas</span><a href="#contacto">Pide presupuesto para tu web</a></div></article>
 </div>
 <p className="intro">Los precios y plazos son orientativos. IVA no incluido.</p>
 <div className="grid service-cards">
-<article className="card"><h3>Automatización</h3><p>Automatiza una tarea repetitiva. Por ejemplo, cuando un cliente acepta un presupuesto, se crea una tarea y se avisa al equipo.</p><ul><li>Un flujo sencillo con un disparador y unas pocas acciones</li><li>Avisos y registro de datos</li><li>Pruebas y guía de uso</li></ul><div className="card-foot"><strong>Desde 450 €</strong><span>1–2 semanas</span><a href="#contacto">Consulta sobre una automatización</a></div></article>
+<article className="card" id="automatizacion-procesos"><h3>Automatización de procesos</h3><p>Automatiza una tarea repetitiva. Por ejemplo, cuando un cliente acepta un presupuesto, se crea una tarea y se avisa al equipo.</p><ul><li>Un flujo sencillo con un disparador y unas pocas acciones</li><li>Avisos y registro de datos</li><li>Pruebas y guía de uso</li></ul><div className="card-foot"><strong>Desde 450 €</strong><span>1–2 semanas</span><a href="#contacto">Consulta sobre una automatización</a></div></article>
 <article className="card"><h3>Implementación de IA</h3><p>Incorporamos IA a tareas concretas de tu negocio.</p><ul><li>Chatbots con información de tu negocio</li><li>Automatización de lectura y clasificación de mensajes o documentos</li><li>Derivación de consultas a tu equipo</li></ul><div className="card-foot"><strong>Proyecto piloto desde 900 €</strong><span>Un caso de uso y una fuente de datos. Consumo de IA aparte.</span><a href="#contacto">Consulta sobre una solución con IA</a></div></article>
 <article className="card"><h3>Integraciones</h3><p>Conecta las herramientas que tu equipo ya usa. Por ejemplo, registra los pedidos de tu tienda en tu sistema de gestión.</p><ul><li>Conexión entre dos herramientas con API</li><li>Sincronización de datos en una dirección</li><li>Pruebas y documentación</li></ul><div className="card-foot"><strong>Desde 650 €</strong><span>2–3 semanas. Migraciones y sincronización bidireccional se cotizan aparte.</span><a href="#contacto">Consulta sobre una integración</a></div></article>
 <article className="card"><h3>Mantenimiento web</h3><p>Copias de seguridad, actualizaciones y hasta 30 minutos de cambios al mes para una web corporativa.</p><div className="card-foot"><strong>Desde 59 €/mes</strong><span>Sistemas de gestión e integraciones se cotizan según alcance.</span><a href="#contacto">Consulta sobre mantenimiento</a></div></article>
@@ -79,6 +84,7 @@ export default function Home() {
       <div className="team-intro">
         <h2 id="equipo-titulo">Somos <span>Mahui Tech</span></h2>
         <p>Somos dos desarrolladores y trabajamos juntos en cada proyecto. Desde la primera conversación hasta la entrega, hablas directamente con quienes lo construimos.</p>
+        <p>Trabajamos online desde {businessLocation.city} ({businessLocation.province}) con clientes de toda {businessLocation.country}.</p>
         <a className="btn" href="#contacto">Hablemos 20 minutos</a>
       </div>
       <div className="team-members">
@@ -101,6 +107,13 @@ export default function Home() {
     </ul>
   </div>
 </section>
+<section className="block" id="guias">
+  <div className="wrap">
+    <h2>Guías para pymes y autónomos</h2>
+    <GuideList />
+    <a className="guide-link" href="/guias/">Ver todas las guías</a>
+  </div>
+</section>
 <section className="block" id="preguntas">
   <div className="wrap">
     <h2>Preguntas frecuentes</h2>
@@ -120,7 +133,7 @@ export default function Home() {
   <Contact email={contactEmail} />
 </div></section>
 </main>
-<footer className="wrap"><a className="logo" href="#inicio">mahui tech<sup aria-hidden="true">✦</sup></a><div className="legal-links"><a href="/aviso-legal/">Aviso legal</a><a href="/privacidad/">Política de privacidad</a><a href="/cookies/">Política de cookies</a></div></footer>
+<footer className="wrap"><SiteLogo href="#inicio" /><div className="legal-links"><a href="/aviso-legal/">Aviso legal</a><a href="/privacidad/">Política de privacidad</a><a href="/cookies/">Política de cookies</a></div></footer>
 </div>
   );
 }

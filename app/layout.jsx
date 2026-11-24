@@ -1,10 +1,11 @@
 import './globals.css';
+import { siteName, siteUrl } from './site-config';
 
 export const metadata = {
-  metadataBase: new URL('https://mahuitech.es'),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: 'Mahui Tech',
-    template: '%s | Mahui Tech',
+    default: siteName,
+    template: `%s | ${siteName}`,
   },
 };
 
